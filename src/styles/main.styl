@@ -1,0 +1,9 @@
+imports = {
+    base: ('variables' 'functions' 'mixins' 'helpers' 'reset')
+}
+
+for namespace, files in (imports) {
+    for file in (files) {
+        @import pathjoin(namespace, file);
+    }
+}

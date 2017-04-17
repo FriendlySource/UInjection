@@ -1,0 +1,37 @@
+{
+    "common": {
+        "root": "./",
+        "environment": "development",
+        "build": {
+            "path": {
+                "base": "dist/"
+            }
+        }
+    },
+    "style": {
+        "src": {
+            "name": "main",
+            "extension": "styl",
+            "path": "src/styles/"
+        },
+        "build": {
+            "name": "main",
+            "extension": "css",
+            "path": "dist/styles/",
+            "minify": "false"
+        } 
+    },
+    "script": {
+        "src": {
+            "name": "main",
+            "extension": "js",
+            "path": "src/scripts/"
+        },
+        "build": {
+            "name": "main",
+            "extension": "js",
+            "path": "dist/scripts/",
+            "minify": "false"
+        }
+    }
+}

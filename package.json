@@ -1,0 +1,27 @@
+{
+  "name": "uinjection",
+  "version": "1.0.0",
+  "description": "responsive framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui",
+    "injection",
+    "css",
+    "style",
+    "responsove"
+  ],
+  "author": "idmitrov",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.13.0",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "gulp-stylus": "^2.6.0"
+  }
+}

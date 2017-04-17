@@ -1,0 +1,108 @@
++prefix-classes(app.info.prefix) {
+    // HELPERS
+    helper = {
+        display: {
+            type: (block inline-block flex table table-cell),
+            option: {
+                table: {
+                    table-layout: (fixed auto)
+                },
+                flex: {
+                    flex-direction: (row row-reverse colum column-reverse),
+                    flex-wrap: (wrap nowrap wrap-reverse),
+                    justify-content: (flex-start flex-end center space-around space-between)
+                }
+            }
+        },
+        aligning: {
+            horizontal: (left center right),
+            vertical: (top middle bottom)
+        },
+        spacing: {
+            margin: (top right bottom left center),
+            padding: (top right bottom left)
+        },
+        positioning: {
+            type: (static relative absolute fixed),
+            side: (top right bottom left)
+        }
+    };
+
+    for breakpoint-name in app.responsive.breakpoint {
+        +set-breakpoint(breakpoint-name) {
+            // DISPLAY
+            for display-type in (helper.display.type) {
+                // TABLE OPTIONS
+                if (is(display-type, table)) {
+                    for option, values in (helper.display.option.table) {
+                        for value in (values) {
+                            .{option}-{value}-{breakpoint-name} {
+                                {option}: value;
+                            }
+                        }
+                    }
+                }
+
+                // FLEX OPTIONS
+                if (is(display-type, flex)) {
+                     for option, values in (helper.display.option.flex) {
+                        for value in (values) {
+                            .{option}-{value}-{breakpoint-name} {
+                                {option}: value;
+                            }
+                        }
+                    }
+                }
+
+                .{display-type}-{breakpoint-name} {
+                    display: display-type;
+                }
+            }
+
+            // WIDTH
+            for value in (app.constant.full..app.grid.length) {
+                .width-{value}-{breakpoint-name} {
+                    width: percentage(app.constant.full / value);
+                }
+            }
+
+            // ALIGN
+            for type, values in (helper.aligning) {
+                for value in (values) {
+                    .align-{value}-{breakpoint-name} {
+                        type = type == vertical ? type : text;
+
+                        {type}-align: value;
+                    }
+                }
+            }
+
+            // SPACING
+            for type, values in helper.spacing {
+                for value in (values) {
+                    .{type}-{value}-{breakpoint-name} {
+                        if (type == margin && value == center) {
+                            margin-left: auto;
+                            margin-right: auto;
+                        } else {
+                            {type}-{value}: toUnit(app.grid.spacing);
+                        }
+                    }
+                }
+            }
+
+            // POSITIONING
+            for key, values in helper.positioning {
+                for value in (values) {
+                    .{value}-{breakpoint-name} {
+                        if (key == side) {
+                            {value}: app.constant.zero;
+                        } else {
+                            position: value;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

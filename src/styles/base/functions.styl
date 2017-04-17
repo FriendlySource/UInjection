@@ -1,0 +1,19 @@
+toUnit(value, unit = app.responsive.unit) {
+    if (value == 0) {
+        return value;
+    }
+
+    if (unit == rem) {
+        value /= 10;
+    }
+
+    return s('%s%s', value, unit);
+}
+
+toNegative(value) {
+    return 0 - value;
+}
+
+is(target, expected) {
+    return target == expected;
+}

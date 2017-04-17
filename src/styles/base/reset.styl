@@ -1,0 +1,13 @@
+html, body,
+div, span
+main, section, article, footer,
+nav, ul, li, a {
+    margin: app.constant.zero;
+    padding: app.constant.zero;
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}

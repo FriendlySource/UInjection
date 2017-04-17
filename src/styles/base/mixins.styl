@@ -1,0 +1,11 @@
+set-breakpoint(breakpoint, condition = min-width, device = screen) {
+    if (app.responsive.breakpoint[breakpoint]) {
+        query = s('%s and (%s: %spx)', device, condition, app.responsive.breakpoint[breakpoint]); 
+
+        @media query {
+            block;
+        }
+    } else {
+        error('Undefined breakpoint "' + breakpoint + '"');
+    }
+}
