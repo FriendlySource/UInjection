@@ -21,6 +21,10 @@ to-unit(value, unit = app.responsive.unit) {
 }
 
 to-negative(value) {
+    if (typeof(value) == string) {
+        error('Cannot set string to-negative');
+    }
+
     return 0 - value;
 }
 
