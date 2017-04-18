@@ -1,3 +1,51 @@
+/**
+*   @name to-unit
+*   @desc
+*
+*   @param {Number} Value
+*/
+html,
+body,
+div,
+span,
+main,
+section,
+article,
+footer,
+nav,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html:before,
+body:before,
+div:before,
+span:before,
+main:before,
+section:before,
+article:before,
+footer:before,
+nav:before,
+ul:before,
+li:before,
+a:before,
+html:after,
+body:after,
+div:after,
+span:after,
+main:after,
+section:after,
+article:after,
+footer:after,
+nav:after,
+ul:after,
+li:after,
+a:after {
+  box-sizing: inherit;
+}
 @media screen and (min-width: 320px) {
   .ui-block-extra-small {
     display: block;
@@ -81,36 +129,6 @@
   }
   .ui-table-cell-extra-small {
     display: table-cell;
-  }
-  .ui-width-1-extra-small {
-    width: 100%;
-  }
-  .ui-width-2-extra-small {
-    width: 50%;
-  }
-  .ui-width-3-extra-small {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-extra-small {
-    width: 25%;
-  }
-  .ui-width-5-extra-small {
-    width: 20%;
-  }
-  .ui-width-6-extra-small {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-extra-small {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-extra-small {
-    width: 12.5%;
-  }
-  .ui-width-9-extra-small {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-extra-small {
-    width: 10%;
   }
   .ui-align-left-extra-small {
     text-align: left;
@@ -267,36 +285,6 @@
   .ui-table-cell-small {
     display: table-cell;
   }
-  .ui-width-1-small {
-    width: 100%;
-  }
-  .ui-width-2-small {
-    width: 50%;
-  }
-  .ui-width-3-small {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-small {
-    width: 25%;
-  }
-  .ui-width-5-small {
-    width: 20%;
-  }
-  .ui-width-6-small {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-small {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-small {
-    width: 12.5%;
-  }
-  .ui-width-9-small {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-small {
-    width: 10%;
-  }
   .ui-align-left-small {
     text-align: left;
   }
@@ -451,36 +439,6 @@
   }
   .ui-table-cell-medium {
     display: table-cell;
-  }
-  .ui-width-1-medium {
-    width: 100%;
-  }
-  .ui-width-2-medium {
-    width: 50%;
-  }
-  .ui-width-3-medium {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-medium {
-    width: 25%;
-  }
-  .ui-width-5-medium {
-    width: 20%;
-  }
-  .ui-width-6-medium {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-medium {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-medium {
-    width: 12.5%;
-  }
-  .ui-width-9-medium {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-medium {
-    width: 10%;
   }
   .ui-align-left-medium {
     text-align: left;
@@ -637,36 +595,6 @@
   .ui-table-cell-large {
     display: table-cell;
   }
-  .ui-width-1-large {
-    width: 100%;
-  }
-  .ui-width-2-large {
-    width: 50%;
-  }
-  .ui-width-3-large {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-large {
-    width: 25%;
-  }
-  .ui-width-5-large {
-    width: 20%;
-  }
-  .ui-width-6-large {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-large {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-large {
-    width: 12.5%;
-  }
-  .ui-width-9-large {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-large {
-    width: 10%;
-  }
   .ui-align-left-large {
     text-align: left;
   }
@@ -822,36 +750,6 @@
   .ui-table-cell-extra-large {
     display: table-cell;
   }
-  .ui-width-1-extra-large {
-    width: 100%;
-  }
-  .ui-width-2-extra-large {
-    width: 50%;
-  }
-  .ui-width-3-extra-large {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-extra-large {
-    width: 25%;
-  }
-  .ui-width-5-extra-large {
-    width: 20%;
-  }
-  .ui-width-6-extra-large {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-extra-large {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-extra-large {
-    width: 12.5%;
-  }
-  .ui-width-9-extra-large {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-extra-large {
-    width: 10%;
-  }
   .ui-align-left-extra-large {
     text-align: left;
   }
@@ -922,48 +820,6 @@
   .ui-left-extra-large {
     left: 0;
   }
-}
-html,
-body,
-div,
-span,
-main,
-section,
-article,
-footer,
-nav,
-ul,
-li,
-a {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html:before,
-body:before,
-div:before,
-span:before,
-main:before,
-section:before,
-article:before,
-footer:before,
-nav:before,
-ul:before,
-li:before,
-a:before,
-html:after,
-body:after,
-div:after,
-span:after,
-main:after,
-section:after,
-article:after,
-footer:after,
-nav:after,
-ul:after,
-li:after,
-a:after {
-  box-sizing: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */
