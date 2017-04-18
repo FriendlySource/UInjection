@@ -58,8 +58,8 @@ init-helper-display(breakpoint-name, display-types = app.helper.display.type) {
     }
 }
 
- // WIDTH
- init-helper-width(breakpoint-name) {
+// WIDTH
+init-helper-width(breakpoint-name) {
     for value in (app.constant.full..app.grid.length) {
         .width-{value}-{breakpoint-name} {
             width: percentage(app.constant.full / value);
