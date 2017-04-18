@@ -7,3 +7,13 @@ for namespace, files in (imports) {
         @import pathjoin(namespace, file);
     }
 }
+
+for breakpoint in (app.responsive.breakpoint) {
+    +prefix-classes(app.info.prefix) {
+        +set-breakpoint(breakpoint) {
+            for helper in (app.helper) {
+                init-helper-{helper}(breakpoint);
+            }
+        }
+    }
+}

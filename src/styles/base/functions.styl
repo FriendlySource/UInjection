@@ -1,4 +1,10 @@
-toUnit(value, unit = app.responsive.unit) {
+/**
+*   @name to-unit
+*   @desc
+*
+*   @param {Number} Value
+*/
+to-unit(value, unit = app.responsive.unit) {
     if (value == 0) {
         return value;
     }
@@ -10,7 +16,7 @@ toUnit(value, unit = app.responsive.unit) {
     return s('%s%s', value, unit);
 }
 
-toNegative(value) {
+to-negative(value) {
     return 0 - value;
 }
 
