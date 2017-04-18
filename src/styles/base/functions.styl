@@ -1,8 +1,10 @@
 /**
 *   @name to-unit
-*   @desc
+*   @desc Convert to unit depending of app.responsive.unit
+*   using the function helps easly to switch app.responsive.unit value between rem -> px
 *
 *   @param {Number} Value
+*   @param {CSS Promerty} unit (opt)
 */
 to-unit(value, unit = app.responsive.unit) {
     if (typeof(value) == string) {
@@ -20,6 +22,12 @@ to-unit(value, unit = app.responsive.unit) {
     return s('%s%s', value, unit);
 }
 
+/**
+*   @name to-negative
+*   @desc Return the negative value
+*
+*   @param {Number} value
+*/
 to-negative(value) {
     if (typeof(value) == string) {
         error('Cannot set string to-negative');
@@ -28,6 +36,13 @@ to-negative(value) {
     return 0 - value;
 }
 
+/**
+*   @name is
+*   @desc Compare if both arguments are equal and return boolean
+*
+*   @param {Any} target
+*   @param {Any} expected
+*/
 is(target, expected) {
     return target == expected;
 }
