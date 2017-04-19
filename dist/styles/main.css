@@ -215,6 +215,9 @@ a:after {
   .ui-left-extra-small {
     left: 0;
   }
+  .ui-width-auto-extra-small {
+    width: auto;
+  }
   .ui-width-1-extra-small {
     width: 100%;
   }
@@ -399,6 +402,9 @@ a:after {
   }
   .ui-left-small {
     left: 0;
+  }
+  .ui-width-auto-small {
+    width: auto;
   }
   .ui-width-1-small {
     width: 100%;
@@ -585,6 +591,9 @@ a:after {
   .ui-left-medium {
     left: 0;
   }
+  .ui-width-auto-medium {
+    width: auto;
+  }
   .ui-width-1-medium {
     width: 100%;
   }
@@ -770,6 +779,9 @@ a:after {
   .ui-left-large {
     left: 0;
   }
+  .ui-width-auto-large {
+    width: auto;
+  }
   .ui-width-1-large {
     width: 100%;
   }
@@ -954,6 +966,9 @@ a:after {
   }
   .ui-left-extra-large {
     left: 0;
+  }
+  .ui-width-auto-extra-large {
+    width: auto;
   }
   .ui-width-1-extra-large {
     width: 100%;
