@@ -2,17 +2,22 @@ imports = {
     base: ('variables' 'functions' 'mixins' 'helpers' 'reset')
 }
 
+// IMPORT STYLES
 for namespace, files in (imports) {
     for file in (files) {
         @import pathjoin(namespace, file);
     }
 }
 
+
+// EXPORT STYLES
 for breakpoint in (app.responsive.breakpoint) {
     +prefix-classes(app.info.prefix) {
         +set-breakpoint(breakpoint) {
-            for helper in (app.helper) {
-                init-helper-{helper}(breakpoint);
+            for export, modules in (app.exports) {
+                for module in (modules) {
+                    init-{export}-{module}(breakpoint);
+                }
             }
         }
     }
