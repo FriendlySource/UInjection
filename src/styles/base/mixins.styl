@@ -9,3 +9,15 @@ set-breakpoint(breakpoint, condition = min-width, device = screen) {
         error('Undefined breakpoint "' + breakpoint + '"');
     }
 }
+
+export(exports, options = null) {
+    for export, modules in (exports) {
+        for module in (modules) {
+            if (options) {
+                init-{export}-{module}(options);
+            } else {
+                init-{export}-{module}();
+            }
+        }
+    }
+}

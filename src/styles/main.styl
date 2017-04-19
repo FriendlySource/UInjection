@@ -1,5 +1,7 @@
 imports = {
-    base: ('variables' 'functions' 'mixins' 'helpers' 'reset')
+    base: ('variables' 'functions' 'mixins' 'helpers' 'reset'),
+    layout: (),
+    component: ()
 }
 
 // IMPORT STYLES
@@ -9,16 +11,16 @@ for namespace, files in (imports) {
     }
 }
 
+// EXPORT REGULAR STYLES (NOT RESPONSIVE)
++prefix-classes(app.info.prefix) {
+    export(app.exports.regular);
+}
 
-// EXPORT STYLES
+// EXPORT RESPONSIVE STYLES
 for breakpoint in (app.responsive.breakpoint) {
     +prefix-classes(app.info.prefix) {
         +set-breakpoint(breakpoint) {
-            for export, modules in (app.exports) {
-                for module in (modules) {
-                    init-{export}-{module}(breakpoint);
-                }
-            }
+            export(app.exports.responsive, breakpoint);
         }
     }
 }

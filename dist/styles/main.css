@@ -61,6 +61,12 @@ li:after,
 a:after {
   box-sizing: inherit;
 }
+html {
+  font-size: 10px;
+}
+.ui-wrapper {
+  width: 100%;
+}
 @media screen and (min-width: 320px) {
   .ui-block-extra-small {
     display: block;
@@ -214,6 +220,9 @@ a:after {
   }
   .ui-left-extra-small {
     left: 0;
+  }
+  .ui-max-width-extra-small {
+    max-width: 32rem;
   }
   .ui-width-auto-extra-small {
     width: auto;
@@ -403,6 +412,9 @@ a:after {
   .ui-left-small {
     left: 0;
   }
+  .ui-max-width-small {
+    max-width: 48rem;
+  }
   .ui-width-auto-small {
     width: auto;
   }
@@ -590,6 +602,9 @@ a:after {
   }
   .ui-left-medium {
     left: 0;
+  }
+  .ui-max-width-medium {
+    max-width: 76.8rem;
   }
   .ui-width-auto-medium {
     width: auto;
@@ -779,6 +794,9 @@ a:after {
   .ui-left-large {
     left: 0;
   }
+  .ui-max-width-large {
+    max-width: 102.4rem;
+  }
   .ui-width-auto-large {
     width: auto;
   }
@@ -966,6 +984,9 @@ a:after {
   }
   .ui-left-extra-large {
     left: 0;
+  }
+  .ui-max-width-extra-large {
+    max-width: 128rem;
   }
   .ui-width-auto-extra-large {
     width: auto;

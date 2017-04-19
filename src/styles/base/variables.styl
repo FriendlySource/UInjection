@@ -11,7 +11,7 @@ app = {
         full: 1
     },
     responsive: {
-        unit: rem, 
+        unit: rem,
         breakpoint: {
             extra-small: 320,
             small: 480,
@@ -22,7 +22,16 @@ app = {
     },
     grid: {
         length: 10,
-        spacing: 10
+        spacing: 10,
     },
-    exports: {}
+    layout: {
+        centered: true,
+        width: {
+            max: 1024,
+        },
+    },
+    exports: {
+        regular: {},
+        responsive: {}
+    }
 }

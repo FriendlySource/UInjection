@@ -1,5 +1,6 @@
 // HELPER
-app.exports.helper = ('display' 'aligning' 'spacing' 'positioning' 'width');
+app.exports.responsive.helper = ('display' 'aligning' 'spacing' 'positioning' 'width');
+app.exports.regular.helper = ('common');
 
 app.helper = {
     display: {
@@ -62,6 +63,10 @@ init-helper-display(breakpoint-name, display-types = app.helper.display.type) {
 
 // WIDTH
 init-helper-width(breakpoint-name) {
+    .max-width-{breakpoint-name} {
+        max-width: to-unit(app.responsive.breakpoint[breakpoint-name]);
+    }
+
     .width-auto-{breakpoint-name} {
         width: auto;
     }
@@ -114,5 +119,12 @@ init-helper-positioning(breakpoint-name) {
                 }
             }
         }
+    }
+}
+
+// COMMON
+init-helper-common() {
+    .wrapper {
+        width: percentage(app.constant.full);
     }
 }
