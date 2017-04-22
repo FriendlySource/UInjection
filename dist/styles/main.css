@@ -23,6 +23,13 @@ html,
 body,
 div,
 span,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 main,
 section,
 article,
@@ -30,7 +37,8 @@ footer,
 nav,
 ul,
 li,
-a {
+a,
+p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,6 +47,13 @@ html:before,
 body:before,
 div:before,
 span:before,
+header:before,
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before,
 main:before,
 section:before,
 article:before,
@@ -47,10 +62,18 @@ nav:before,
 ul:before,
 li:before,
 a:before,
+p:before,
 html:after,
 body:after,
 div:after,
 span:after,
+header:after,
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after,
 main:after,
 section:after,
 article:after,
@@ -58,14 +81,23 @@ footer:after,
 nav:after,
 ul:after,
 li:after,
-a:after {
+a:after,
+p:after {
   box-sizing: inherit;
 }
 html {
   font-size: 10px;
+  color: #000;
+  background-color: #fff;
+}
+body {
+  font-size: 1.5rem;
+  text-align: left;
 }
 .ui-wrapper {
   width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 320px) {
   .ui-block-extra-small {

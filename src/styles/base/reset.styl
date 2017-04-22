@@ -1,7 +1,8 @@
 html, body,
-div, span
+div, span,
+header, h1, h2, h3, h4, h5, h6,
 main, section, article, footer,
-nav, ul, li, a {
+nav, ul, li, a, p {
     margin: to-unit(app.constant.zero);
     padding: to-unit(app.constant.zero);
     box-sizing: border-box;
@@ -15,4 +16,11 @@ nav, ul, li, a {
 html {
     // TODO: Extract root properties in app object
     font-size: 10px;
+    color: #000;
+    background-color: #FFF;
+}
+
+body {
+    font-size: to-unit(15);
+    text-align: left;
 }

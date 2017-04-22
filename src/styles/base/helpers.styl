@@ -5,7 +5,7 @@ app.exports.regular.helper = ('common');
 app.helper = {
     display: {
         type: ('block' 'inline-block' 'flex' 'table' 'table-cell'),
-        option: {
+        property: {
             table: {
                 table-layout: ('fixed' 'auto')
             },
@@ -34,22 +34,22 @@ app.helper = {
 init-helper-display(breakpoint-name, display-types = app.helper.display.type) {
     for display-type in (display-types) {
         // TABLE OPTIONS
-        if (is(display-type, table)) {
-            for option, values in (app.helper.display.option.table) {
+        if (is(display-type, 'table')) {
+            for property, values in (app.helper.display.property.table) {
                 for value in (values) {
-                    .{option}-{value}-{breakpoint-name} {
-                        {option}: unquote(value);
+                    .{property}-{value}-{breakpoint-name} {
+                        {property}: unquote(value);
                     }
                 }
             }
         }
 
-        // FLEX OPTIONS
-        if (is(display-type, flex)) {
-            for option, values in (app.helper.display.option.flex) {
+        // FLEX property
+        if (is(display-type, 'flex')) {
+            for property, values in (app.helper.display.property.flex) {
                 for value in (values) {
-                    .{option}-{value}-{breakpoint-name} {
-                        {option}: unquote(value);
+                    .{property}-{value}-{breakpoint-name} {
+                        {property}: unquote(value);
                     }
                 }
             }
@@ -126,5 +126,7 @@ init-helper-positioning(breakpoint-name) {
 init-helper-common() {
     .wrapper {
         width: percentage(app.constant.full);
+        padding-left: to-unit(app.grid.spacing);
+        padding-right: to-unit(app.grid.spacing);
     }
 }
