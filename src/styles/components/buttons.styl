@@ -1,0 +1,41 @@
+app.button = {
+    font: {
+        size: 16
+    },
+    padding: {
+        top: 10,
+        right: 15,
+        bottom: 10,
+        left: 15
+    }
+};
+app.exports.regular.button = ('default');
+
+init-button-default() {
+    button.button,
+    input[type="button"].button,
+    input[type="submit"].button {
+        border: none;
+    }
+
+    .button {
+        @extends $anchor-button-abstract;
+
+        display: inline-block;
+        font-size: to-unit(app.button.font.size);
+        background-color: unquote(app.color.default);
+        cursor: pointer;
+
+        for padding-side, padding-value in (app.button.padding) {
+            padding-{padding-side}: to-unit(padding-value);
+            
+            &.button-{app.constant.small} {
+                padding-{padding-side}: to-unit(multiply(padding-value));
+            }
+
+            &.button-{app.constant.large} {
+                padding-{padding-side}: to-unit(divide(padding-value));
+            }
+        }
+    }
+}
