@@ -8,21 +8,26 @@ app = {
     constant: {
         zero: 0,
         half: .5,
-        full: 1
+        full: 1,
+        small: 'small',
+        large: 'large'
     },
     responsive: {
         unit: rem,
         breakpoint: {
-            extra-small: 320,
-            small: 480,
-            medium: 768,
-            large: 1024,
-            extra-large: 1280
+            mobile: 320,
+            tablet: 768,
+            desktop: 1024
         }
     },
     grid: {
         length: 10,
         spacing: 10,
+    },
+    color: {
+        success: '#0F0',
+        error: '#F00',
+        default: '#EEE'
     },
     exports: {
         regular: {},
