@@ -19,6 +19,27 @@
 *   @param {Any} target
 *   @param {Any} expected
 */
+/**
+*   @name mutiply
+*   @desc multiply a given value
+*
+*   @param {Nunmber} value
+*/
+/**
+*   @name divide
+*   @desc divide a given value
+*
+*   @param {Nunmber} value
+*/
+.ui-button[href] {
+  text-decoration: none;
+}
+.ui-button[href]:visited {
+  color: inherit;
+}
+.ui-button[href]:active {
+  color: inherit;
+}
 html,
 body,
 div,
@@ -38,7 +59,11 @@ nav,
 ul,
 li,
 a,
-p {
+p,
+input,
+label,
+form,
+button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -63,6 +88,10 @@ ul:before,
 li:before,
 a:before,
 p:before,
+input:before,
+label:before,
+form:before,
+button:before,
 html:after,
 body:after,
 div:after,
@@ -82,7 +111,11 @@ nav:after,
 ul:after,
 li:after,
 a:after,
-p:after {
+p:after,
+input:after,
+label:after,
+form:after,
+button:after {
   box-sizing: inherit;
 }
 html {
@@ -99,958 +132,615 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+button.ui-button,
+input[type="button"].ui-button,
+input[type="submit"].ui-button {
+  border: none;
+}
+.ui-button {
+  display: inline-block;
+  font-size: 1.6rem;
+  background-color: #EEE;
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.ui-button.ui-button-small {
+  padding-top: 2rem;
+}
+.ui-button.ui-button-large {
+  padding-top: 0.5rem;
+}
+.ui-button.ui-button-small {
+  padding-right: 3rem;
+}
+.ui-button.ui-button-large {
+  padding-right: 0.75rem;
+}
+.ui-button.ui-button-small {
+  padding-bottom: 2rem;
+}
+.ui-button.ui-button-large {
+  padding-bottom: 0.5rem;
+}
+.ui-button.ui-button-small {
+  padding-left: 3rem;
+}
+.ui-button.ui-button-large {
+  padding-left: 0.75rem;
+}
 @media screen and (min-width: 320px) {
-  .ui-block-extra-small {
+  .ui-block-mobile {
     display: block;
   }
-  .ui-inline-block-extra-small {
+  .ui-inline-block-mobile {
     display: inline-block;
   }
-  .ui-flex-direction-row-extra-small {
+  .ui-flex-direction-row-mobile {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .ui-flex-direction-row-reverse-extra-small {
+  .ui-flex-direction-row-reverse-mobile {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .ui-flex-direction-colum-extra-small {
+  .ui-flex-direction-colum-mobile {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: colum;
             flex-direction: colum;
   }
-  .ui-flex-direction-column-reverse-extra-small {
+  .ui-flex-direction-column-reverse-mobile {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .ui-flex-wrap-wrap-extra-small {
+  .ui-flex-wrap-wrap-mobile {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .ui-flex-wrap-nowrap-extra-small {
+  .ui-flex-wrap-nowrap-mobile {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .ui-flex-wrap-wrap-reverse-extra-small {
+  .ui-flex-wrap-wrap-reverse-mobile {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
   }
-  .ui-justify-content-flex-start-extra-small {
+  .ui-justify-content-flex-start-mobile {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .ui-justify-content-flex-end-extra-small {
+  .ui-justify-content-flex-end-mobile {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .ui-justify-content-center-extra-small {
+  .ui-justify-content-center-mobile {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .ui-justify-content-space-around-extra-small {
+  .ui-justify-content-space-around-mobile {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .ui-justify-content-space-between-extra-small {
+  .ui-justify-content-space-between-mobile {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .ui-flex-extra-small {
+  .ui-flex-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .ui-table-layout-fixed-extra-small {
+  .ui-table-layout-fixed-mobile {
     table-layout: fixed;
   }
-  .ui-table-layout-auto-extra-small {
+  .ui-table-layout-auto-mobile {
     table-layout: auto;
   }
-  .ui-table-extra-small {
+  .ui-table-mobile {
     display: table;
   }
-  .ui-table-cell-extra-small {
+  .ui-table-cell-mobile {
     display: table-cell;
   }
-  .ui-align-left-extra-small {
+  .ui-align-left-mobile {
     text-align: left;
   }
-  .ui-align-center-extra-small {
+  .ui-align-center-mobile {
     text-align: center;
   }
-  .ui-align-right-extra-small {
+  .ui-align-right-mobile {
     text-align: right;
   }
-  .ui-align-top-extra-small {
+  .ui-align-top-mobile {
     vertical-align: top;
   }
-  .ui-align-middle-extra-small {
+  .ui-align-middle-mobile {
     vertical-align: middle;
   }
-  .ui-align-bottom-extra-small {
+  .ui-align-bottom-mobile {
     vertical-align: bottom;
   }
-  .ui-margin-top-extra-small {
+  .ui-margin-top-mobile {
     margin-top: 1rem;
   }
-  .ui-margin-right-extra-small {
+  .ui-margin-right-mobile {
     margin-right: 1rem;
   }
-  .ui-margin-bottom-extra-small {
+  .ui-margin-bottom-mobile {
     margin-bottom: 1rem;
   }
-  .ui-margin-left-extra-small {
+  .ui-margin-left-mobile {
     margin-left: 1rem;
   }
-  .ui-margin-center-extra-small {
+  .ui-margin-center-mobile {
     margin-left: auto;
     margin-right: auto;
   }
-  .ui-padding-top-extra-small {
+  .ui-padding-top-mobile {
     padding-top: 1rem;
   }
-  .ui-padding-right-extra-small {
+  .ui-padding-right-mobile {
     padding-right: 1rem;
   }
-  .ui-padding-bottom-extra-small {
+  .ui-padding-bottom-mobile {
     padding-bottom: 1rem;
   }
-  .ui-padding-left-extra-small {
+  .ui-padding-left-mobile {
     padding-left: 1rem;
   }
-  .ui-static-extra-small {
+  .ui-static-mobile {
     position: static;
   }
-  .ui-relative-extra-small {
+  .ui-relative-mobile {
     position: relative;
   }
-  .ui-absolute-extra-small {
+  .ui-absolute-mobile {
     position: absolute;
   }
-  .ui-fixed-extra-small {
+  .ui-fixed-mobile {
     position: fixed;
   }
-  .ui-top-extra-small {
+  .ui-top-mobile {
     top: 0;
   }
-  .ui-right-extra-small {
+  .ui-right-mobile {
     right: 0;
   }
-  .ui-bottom-extra-small {
+  .ui-bottom-mobile {
     bottom: 0;
   }
-  .ui-left-extra-small {
+  .ui-left-mobile {
     left: 0;
   }
-  .ui-max-width-extra-small {
+  .ui-max-width-mobile {
     max-width: 32rem;
   }
-  .ui-width-auto-extra-small {
+  .ui-width-auto-mobile {
     width: auto;
   }
-  .ui-width-1-extra-small {
+  .ui-width-1-mobile {
     width: 100%;
   }
-  .ui-width-2-extra-small {
+  .ui-width-2-mobile {
     width: 50%;
   }
-  .ui-width-3-extra-small {
+  .ui-width-3-mobile {
     width: 33.33333333333333%;
   }
-  .ui-width-4-extra-small {
+  .ui-width-4-mobile {
     width: 25%;
   }
-  .ui-width-5-extra-small {
+  .ui-width-5-mobile {
     width: 20%;
   }
-  .ui-width-6-extra-small {
+  .ui-width-6-mobile {
     width: 16.666666666666664%;
   }
-  .ui-width-7-extra-small {
+  .ui-width-7-mobile {
     width: 14.285714285714285%;
   }
-  .ui-width-8-extra-small {
+  .ui-width-8-mobile {
     width: 12.5%;
   }
-  .ui-width-9-extra-small {
+  .ui-width-9-mobile {
     width: 11.11111111111111%;
   }
-  .ui-width-10-extra-small {
-    width: 10%;
-  }
-}
-@media screen and (min-width: 480px) {
-  .ui-block-small {
-    display: block;
-  }
-  .ui-inline-block-small {
-    display: inline-block;
-  }
-  .ui-flex-direction-row-small {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .ui-flex-direction-row-reverse-small {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .ui-flex-direction-colum-small {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: colum;
-            flex-direction: colum;
-  }
-  .ui-flex-direction-column-reverse-small {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .ui-flex-wrap-wrap-small {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .ui-flex-wrap-nowrap-small {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  .ui-flex-wrap-wrap-reverse-small {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-  }
-  .ui-justify-content-flex-start-small {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .ui-justify-content-flex-end-small {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .ui-justify-content-center-small {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .ui-justify-content-space-around-small {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .ui-justify-content-space-between-small {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .ui-flex-small {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .ui-table-layout-fixed-small {
-    table-layout: fixed;
-  }
-  .ui-table-layout-auto-small {
-    table-layout: auto;
-  }
-  .ui-table-small {
-    display: table;
-  }
-  .ui-table-cell-small {
-    display: table-cell;
-  }
-  .ui-align-left-small {
-    text-align: left;
-  }
-  .ui-align-center-small {
-    text-align: center;
-  }
-  .ui-align-right-small {
-    text-align: right;
-  }
-  .ui-align-top-small {
-    vertical-align: top;
-  }
-  .ui-align-middle-small {
-    vertical-align: middle;
-  }
-  .ui-align-bottom-small {
-    vertical-align: bottom;
-  }
-  .ui-margin-top-small {
-    margin-top: 1rem;
-  }
-  .ui-margin-right-small {
-    margin-right: 1rem;
-  }
-  .ui-margin-bottom-small {
-    margin-bottom: 1rem;
-  }
-  .ui-margin-left-small {
-    margin-left: 1rem;
-  }
-  .ui-margin-center-small {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ui-padding-top-small {
-    padding-top: 1rem;
-  }
-  .ui-padding-right-small {
-    padding-right: 1rem;
-  }
-  .ui-padding-bottom-small {
-    padding-bottom: 1rem;
-  }
-  .ui-padding-left-small {
-    padding-left: 1rem;
-  }
-  .ui-static-small {
-    position: static;
-  }
-  .ui-relative-small {
-    position: relative;
-  }
-  .ui-absolute-small {
-    position: absolute;
-  }
-  .ui-fixed-small {
-    position: fixed;
-  }
-  .ui-top-small {
-    top: 0;
-  }
-  .ui-right-small {
-    right: 0;
-  }
-  .ui-bottom-small {
-    bottom: 0;
-  }
-  .ui-left-small {
-    left: 0;
-  }
-  .ui-max-width-small {
-    max-width: 48rem;
-  }
-  .ui-width-auto-small {
-    width: auto;
-  }
-  .ui-width-1-small {
-    width: 100%;
-  }
-  .ui-width-2-small {
-    width: 50%;
-  }
-  .ui-width-3-small {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-small {
-    width: 25%;
-  }
-  .ui-width-5-small {
-    width: 20%;
-  }
-  .ui-width-6-small {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-small {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-small {
-    width: 12.5%;
-  }
-  .ui-width-9-small {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-small {
+  .ui-width-10-mobile {
     width: 10%;
   }
 }
 @media screen and (min-width: 768px) {
-  .ui-block-medium {
+  .ui-block-tablet {
     display: block;
   }
-  .ui-inline-block-medium {
+  .ui-inline-block-tablet {
     display: inline-block;
   }
-  .ui-flex-direction-row-medium {
+  .ui-flex-direction-row-tablet {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .ui-flex-direction-row-reverse-medium {
+  .ui-flex-direction-row-reverse-tablet {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .ui-flex-direction-colum-medium {
+  .ui-flex-direction-colum-tablet {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: colum;
             flex-direction: colum;
   }
-  .ui-flex-direction-column-reverse-medium {
+  .ui-flex-direction-column-reverse-tablet {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .ui-flex-wrap-wrap-medium {
+  .ui-flex-wrap-wrap-tablet {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .ui-flex-wrap-nowrap-medium {
+  .ui-flex-wrap-nowrap-tablet {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .ui-flex-wrap-wrap-reverse-medium {
+  .ui-flex-wrap-wrap-reverse-tablet {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
   }
-  .ui-justify-content-flex-start-medium {
+  .ui-justify-content-flex-start-tablet {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .ui-justify-content-flex-end-medium {
+  .ui-justify-content-flex-end-tablet {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .ui-justify-content-center-medium {
+  .ui-justify-content-center-tablet {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .ui-justify-content-space-around-medium {
+  .ui-justify-content-space-around-tablet {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .ui-justify-content-space-between-medium {
+  .ui-justify-content-space-between-tablet {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .ui-flex-medium {
+  .ui-flex-tablet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .ui-table-layout-fixed-medium {
+  .ui-table-layout-fixed-tablet {
     table-layout: fixed;
   }
-  .ui-table-layout-auto-medium {
+  .ui-table-layout-auto-tablet {
     table-layout: auto;
   }
-  .ui-table-medium {
+  .ui-table-tablet {
     display: table;
   }
-  .ui-table-cell-medium {
+  .ui-table-cell-tablet {
     display: table-cell;
   }
-  .ui-align-left-medium {
+  .ui-align-left-tablet {
     text-align: left;
   }
-  .ui-align-center-medium {
+  .ui-align-center-tablet {
     text-align: center;
   }
-  .ui-align-right-medium {
+  .ui-align-right-tablet {
     text-align: right;
   }
-  .ui-align-top-medium {
+  .ui-align-top-tablet {
     vertical-align: top;
   }
-  .ui-align-middle-medium {
+  .ui-align-middle-tablet {
     vertical-align: middle;
   }
-  .ui-align-bottom-medium {
+  .ui-align-bottom-tablet {
     vertical-align: bottom;
   }
-  .ui-margin-top-medium {
+  .ui-margin-top-tablet {
     margin-top: 1rem;
   }
-  .ui-margin-right-medium {
+  .ui-margin-right-tablet {
     margin-right: 1rem;
   }
-  .ui-margin-bottom-medium {
+  .ui-margin-bottom-tablet {
     margin-bottom: 1rem;
   }
-  .ui-margin-left-medium {
+  .ui-margin-left-tablet {
     margin-left: 1rem;
   }
-  .ui-margin-center-medium {
+  .ui-margin-center-tablet {
     margin-left: auto;
     margin-right: auto;
   }
-  .ui-padding-top-medium {
+  .ui-padding-top-tablet {
     padding-top: 1rem;
   }
-  .ui-padding-right-medium {
+  .ui-padding-right-tablet {
     padding-right: 1rem;
   }
-  .ui-padding-bottom-medium {
+  .ui-padding-bottom-tablet {
     padding-bottom: 1rem;
   }
-  .ui-padding-left-medium {
+  .ui-padding-left-tablet {
     padding-left: 1rem;
   }
-  .ui-static-medium {
+  .ui-static-tablet {
     position: static;
   }
-  .ui-relative-medium {
+  .ui-relative-tablet {
     position: relative;
   }
-  .ui-absolute-medium {
+  .ui-absolute-tablet {
     position: absolute;
   }
-  .ui-fixed-medium {
+  .ui-fixed-tablet {
     position: fixed;
   }
-  .ui-top-medium {
+  .ui-top-tablet {
     top: 0;
   }
-  .ui-right-medium {
+  .ui-right-tablet {
     right: 0;
   }
-  .ui-bottom-medium {
+  .ui-bottom-tablet {
     bottom: 0;
   }
-  .ui-left-medium {
+  .ui-left-tablet {
     left: 0;
   }
-  .ui-max-width-medium {
+  .ui-max-width-tablet {
     max-width: 76.8rem;
   }
-  .ui-width-auto-medium {
+  .ui-width-auto-tablet {
     width: auto;
   }
-  .ui-width-1-medium {
+  .ui-width-1-tablet {
     width: 100%;
   }
-  .ui-width-2-medium {
+  .ui-width-2-tablet {
     width: 50%;
   }
-  .ui-width-3-medium {
+  .ui-width-3-tablet {
     width: 33.33333333333333%;
   }
-  .ui-width-4-medium {
+  .ui-width-4-tablet {
     width: 25%;
   }
-  .ui-width-5-medium {
+  .ui-width-5-tablet {
     width: 20%;
   }
-  .ui-width-6-medium {
+  .ui-width-6-tablet {
     width: 16.666666666666664%;
   }
-  .ui-width-7-medium {
+  .ui-width-7-tablet {
     width: 14.285714285714285%;
   }
-  .ui-width-8-medium {
+  .ui-width-8-tablet {
     width: 12.5%;
   }
-  .ui-width-9-medium {
+  .ui-width-9-tablet {
     width: 11.11111111111111%;
   }
-  .ui-width-10-medium {
+  .ui-width-10-tablet {
     width: 10%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .ui-block-large {
+  .ui-block-desktop {
     display: block;
   }
-  .ui-inline-block-large {
+  .ui-inline-block-desktop {
     display: inline-block;
   }
-  .ui-flex-direction-row-large {
+  .ui-flex-direction-row-desktop {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .ui-flex-direction-row-reverse-large {
+  .ui-flex-direction-row-reverse-desktop {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .ui-flex-direction-colum-large {
+  .ui-flex-direction-colum-desktop {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: colum;
             flex-direction: colum;
   }
-  .ui-flex-direction-column-reverse-large {
+  .ui-flex-direction-column-reverse-desktop {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .ui-flex-wrap-wrap-large {
+  .ui-flex-wrap-wrap-desktop {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .ui-flex-wrap-nowrap-large {
+  .ui-flex-wrap-nowrap-desktop {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .ui-flex-wrap-wrap-reverse-large {
+  .ui-flex-wrap-wrap-reverse-desktop {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
   }
-  .ui-justify-content-flex-start-large {
+  .ui-justify-content-flex-start-desktop {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .ui-justify-content-flex-end-large {
+  .ui-justify-content-flex-end-desktop {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .ui-justify-content-center-large {
+  .ui-justify-content-center-desktop {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .ui-justify-content-space-around-large {
+  .ui-justify-content-space-around-desktop {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .ui-justify-content-space-between-large {
+  .ui-justify-content-space-between-desktop {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .ui-flex-large {
+  .ui-flex-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .ui-table-layout-fixed-large {
+  .ui-table-layout-fixed-desktop {
     table-layout: fixed;
   }
-  .ui-table-layout-auto-large {
+  .ui-table-layout-auto-desktop {
     table-layout: auto;
   }
-  .ui-table-large {
+  .ui-table-desktop {
     display: table;
   }
-  .ui-table-cell-large {
+  .ui-table-cell-desktop {
     display: table-cell;
   }
-  .ui-align-left-large {
+  .ui-align-left-desktop {
     text-align: left;
   }
-  .ui-align-center-large {
+  .ui-align-center-desktop {
     text-align: center;
   }
-  .ui-align-right-large {
+  .ui-align-right-desktop {
     text-align: right;
   }
-  .ui-align-top-large {
+  .ui-align-top-desktop {
     vertical-align: top;
   }
-  .ui-align-middle-large {
+  .ui-align-middle-desktop {
     vertical-align: middle;
   }
-  .ui-align-bottom-large {
+  .ui-align-bottom-desktop {
     vertical-align: bottom;
   }
-  .ui-margin-top-large {
+  .ui-margin-top-desktop {
     margin-top: 1rem;
   }
-  .ui-margin-right-large {
+  .ui-margin-right-desktop {
     margin-right: 1rem;
   }
-  .ui-margin-bottom-large {
+  .ui-margin-bottom-desktop {
     margin-bottom: 1rem;
   }
-  .ui-margin-left-large {
+  .ui-margin-left-desktop {
     margin-left: 1rem;
   }
-  .ui-margin-center-large {
+  .ui-margin-center-desktop {
     margin-left: auto;
     margin-right: auto;
   }
-  .ui-padding-top-large {
+  .ui-padding-top-desktop {
     padding-top: 1rem;
   }
-  .ui-padding-right-large {
+  .ui-padding-right-desktop {
     padding-right: 1rem;
   }
-  .ui-padding-bottom-large {
+  .ui-padding-bottom-desktop {
     padding-bottom: 1rem;
   }
-  .ui-padding-left-large {
+  .ui-padding-left-desktop {
     padding-left: 1rem;
   }
-  .ui-static-large {
+  .ui-static-desktop {
     position: static;
   }
-  .ui-relative-large {
+  .ui-relative-desktop {
     position: relative;
   }
-  .ui-absolute-large {
+  .ui-absolute-desktop {
     position: absolute;
   }
-  .ui-fixed-large {
+  .ui-fixed-desktop {
     position: fixed;
   }
-  .ui-top-large {
+  .ui-top-desktop {
     top: 0;
   }
-  .ui-right-large {
+  .ui-right-desktop {
     right: 0;
   }
-  .ui-bottom-large {
+  .ui-bottom-desktop {
     bottom: 0;
   }
-  .ui-left-large {
+  .ui-left-desktop {
     left: 0;
   }
-  .ui-max-width-large {
+  .ui-max-width-desktop {
     max-width: 102.4rem;
   }
-  .ui-width-auto-large {
+  .ui-width-auto-desktop {
     width: auto;
   }
-  .ui-width-1-large {
+  .ui-width-1-desktop {
     width: 100%;
   }
-  .ui-width-2-large {
+  .ui-width-2-desktop {
     width: 50%;
   }
-  .ui-width-3-large {
+  .ui-width-3-desktop {
     width: 33.33333333333333%;
   }
-  .ui-width-4-large {
+  .ui-width-4-desktop {
     width: 25%;
   }
-  .ui-width-5-large {
+  .ui-width-5-desktop {
     width: 20%;
   }
-  .ui-width-6-large {
+  .ui-width-6-desktop {
     width: 16.666666666666664%;
   }
-  .ui-width-7-large {
+  .ui-width-7-desktop {
     width: 14.285714285714285%;
   }
-  .ui-width-8-large {
+  .ui-width-8-desktop {
     width: 12.5%;
   }
-  .ui-width-9-large {
+  .ui-width-9-desktop {
     width: 11.11111111111111%;
   }
-  .ui-width-10-large {
-    width: 10%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .ui-block-extra-large {
-    display: block;
-  }
-  .ui-inline-block-extra-large {
-    display: inline-block;
-  }
-  .ui-flex-direction-row-extra-large {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .ui-flex-direction-row-reverse-extra-large {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .ui-flex-direction-colum-extra-large {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: colum;
-            flex-direction: colum;
-  }
-  .ui-flex-direction-column-reverse-extra-large {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .ui-flex-wrap-wrap-extra-large {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .ui-flex-wrap-nowrap-extra-large {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  .ui-flex-wrap-wrap-reverse-extra-large {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-  }
-  .ui-justify-content-flex-start-extra-large {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .ui-justify-content-flex-end-extra-large {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .ui-justify-content-center-extra-large {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .ui-justify-content-space-around-extra-large {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .ui-justify-content-space-between-extra-large {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .ui-flex-extra-large {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .ui-table-layout-fixed-extra-large {
-    table-layout: fixed;
-  }
-  .ui-table-layout-auto-extra-large {
-    table-layout: auto;
-  }
-  .ui-table-extra-large {
-    display: table;
-  }
-  .ui-table-cell-extra-large {
-    display: table-cell;
-  }
-  .ui-align-left-extra-large {
-    text-align: left;
-  }
-  .ui-align-center-extra-large {
-    text-align: center;
-  }
-  .ui-align-right-extra-large {
-    text-align: right;
-  }
-  .ui-align-top-extra-large {
-    vertical-align: top;
-  }
-  .ui-align-middle-extra-large {
-    vertical-align: middle;
-  }
-  .ui-align-bottom-extra-large {
-    vertical-align: bottom;
-  }
-  .ui-margin-top-extra-large {
-    margin-top: 1rem;
-  }
-  .ui-margin-right-extra-large {
-    margin-right: 1rem;
-  }
-  .ui-margin-bottom-extra-large {
-    margin-bottom: 1rem;
-  }
-  .ui-margin-left-extra-large {
-    margin-left: 1rem;
-  }
-  .ui-margin-center-extra-large {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ui-padding-top-extra-large {
-    padding-top: 1rem;
-  }
-  .ui-padding-right-extra-large {
-    padding-right: 1rem;
-  }
-  .ui-padding-bottom-extra-large {
-    padding-bottom: 1rem;
-  }
-  .ui-padding-left-extra-large {
-    padding-left: 1rem;
-  }
-  .ui-static-extra-large {
-    position: static;
-  }
-  .ui-relative-extra-large {
-    position: relative;
-  }
-  .ui-absolute-extra-large {
-    position: absolute;
-  }
-  .ui-fixed-extra-large {
-    position: fixed;
-  }
-  .ui-top-extra-large {
-    top: 0;
-  }
-  .ui-right-extra-large {
-    right: 0;
-  }
-  .ui-bottom-extra-large {
-    bottom: 0;
-  }
-  .ui-left-extra-large {
-    left: 0;
-  }
-  .ui-max-width-extra-large {
-    max-width: 128rem;
-  }
-  .ui-width-auto-extra-large {
-    width: auto;
-  }
-  .ui-width-1-extra-large {
-    width: 100%;
-  }
-  .ui-width-2-extra-large {
-    width: 50%;
-  }
-  .ui-width-3-extra-large {
-    width: 33.33333333333333%;
-  }
-  .ui-width-4-extra-large {
-    width: 25%;
-  }
-  .ui-width-5-extra-large {
-    width: 20%;
-  }
-  .ui-width-6-extra-large {
-    width: 16.666666666666664%;
-  }
-  .ui-width-7-extra-large {
-    width: 14.285714285714285%;
-  }
-  .ui-width-8-extra-large {
-    width: 12.5%;
-  }
-  .ui-width-9-extra-large {
-    width: 11.11111111111111%;
-  }
-  .ui-width-10-extra-large {
+  .ui-width-10-desktop {
     width: 10%;
   }
 }
