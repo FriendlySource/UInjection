@@ -1,7 +1,3 @@
-// HELPER
-app.exports.responsive.helper = ('display' 'aligning' 'spacing' 'positioning' 'width');
-app.exports.regular.helper = ('common');
-
 app.helper = {
     display: {
         type: ('block' 'inline-block' 'flex' 'table' 'table-cell'),
@@ -130,3 +126,6 @@ init-helper-common() {
         padding-right: to-unit(app.grid.spacing);
     }
 }
+
+app.exports.responsive.helper = ('display' 'aligning' 'spacing' 'positioning' 'width');
+app.exports.regular.helper = ('common');
