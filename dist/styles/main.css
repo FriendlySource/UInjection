@@ -33,6 +33,7 @@
 */
 .ui-button[href] {
   text-decoration: none;
+  outline: none;
 }
 .ui-button[href]:visited {
   color: inherit;
@@ -136,6 +137,7 @@ button.ui-button,
 input[type="button"].ui-button,
 input[type="submit"].ui-button {
   border: none;
+  outline: none;
 }
 .ui-button {
   display: inline-block;
