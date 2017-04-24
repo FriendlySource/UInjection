@@ -24,6 +24,12 @@ app.helper = {
         type: ('static' 'relative' 'absolute' 'fixed'),
         side: ('top' 'right' 'bottom' 'left')
     },
+    heading: {
+        count: 6,
+        font: {
+            size: (36 30 24 20 16 15)
+        }
+    }
 };
 
 // DISPLAY
@@ -143,6 +149,15 @@ init-helper-positioning(breakpoint-name) {
     }
 }
 
+// HEADING
+init-helper-heading() {
+    for heading-size, heading-index in (app.helper.heading.font.size) {
+        .heading-{heading-index + 1} {
+            font-size: to-unit(heading-size);
+        }
+    }
+}
+
 // COMMON
 init-helper-common() {
     .wrapper {
@@ -153,4 +168,4 @@ init-helper-common() {
 }
 
 app.exports.responsive.helper = ('display' 'aligning' 'spacing' 'positioning' 'width' 'height');
-app.exports.regular.helper = ('common');
+app.exports.regular.helper = ('common' 'heading');
