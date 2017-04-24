@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Documenattion - UInjection</title>
+        <meta name="description" content="html5 responsive framework">
+        <meta name="keywords" content="ui, uinjection, css, responsive, html5, frton-end">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        <div class="ui-wrapper">
+            <header class="ui-header">
+                <h1 class="ui-heading-1">UInjection</h1>
+
+                <nav class="ui-navigation">
+                    <label class="ui-button" for="ui-navigation-trigger">Menu</label>
+                    <input id="ui-navigation-trigger" type="checkbox">
+
+                    <ul class="ui-navigation-items">
+                        <li class="ui-navigation-item">
+                            <a href="/" class="ui-navigation-text" title="Home">Home</a>
+                        </li>
+                        <li class="ui-navigation-item">
+                            <a href="/documentation.html" class="ui-navigation-text ui-navigation-active" title="Documentation">Dcoumentation</a>
+                        </li>
+                        <li class="ui-navigation-item">
+                            <a href="#" class="ui-navigation-text" title="About">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="ui-content">
+                <div>
+                    <h2>Headings</h2>
+
+                    <h1 class="ui-heading-1">.ui-heading-1</h1>
+                    <h2 class="ui-heading-2">.ui-heading-2</h2>
+                    <h3 class="ui-heading-3">.ui-heading-3</h3>
+                    <h4 class="ui-heading-4">.ui-heading-4</h4>
+                    <h5 class="ui-heading-5">.ui-heading-5</h5>
+                    <h6 class="ui-heading-6">.ui-heading-6</h6>
+                </div>
+
+                <div>
+                    <h2>Dimensions</h2>
+                    <!--TODO: SET BACKGROUND COLOR WITH BACKGROUND HELPER-->
+                    <div>
+                        <div class="ui-width-1-mobile ui-padding-all-mobile ui-margin-bottom-mobile" style="background-color: blue;">.ui-width-1-mobile</div>
+                        <div class="ui-width-2-mobile ui-padding-all-mobile ui-margin-bottom-mobile" style="background-color: blue;">.ui-width-2-mobile</div>
+                        <div class="ui-width-3-mobile ui-padding-all-mobile" style="background-color: blue;">.ui-width-2-mobile</div>
+                        
+                        <p>Same breakpoints and values for .ui-height and .ui-max-height</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Buttons</h2>
+                    
+                    <div>
+                        <h3>Default</h3>
+                        <input class="ui-button ui-button-small" type="submit" value="click">
+                        <input class="ui-button" type="button" value="click">
+                        <button class="ui-button ui-button-large">Click</button>
+                        <a href="#" class="ui-button">Click</a>
+                    </div>
+
+                    <div>
+                        <h3>Rounded</h3>
+                        <input class="ui-button ui-button-small ui-button-rounded" type="submit" value="click">
+                        <input class="ui-button ui-button-rounded" type="button" value="click">
+                        <button class="ui-button ui-button-large ui-button-rounded">Click</button>
+                        <a href="#" class="ui-button ui-button-rounded">Click</a>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="ui-footer">
+                Footer
+            </footer>
+        </div>
+        <script src="/scripts/main.js"></script>
+    </body>
+</html>
