@@ -3,7 +3,7 @@
 *   @desc Convert to unit depending of app.responsive.unit
 *   using the function helps easly to switch app.responsive.unit value between rem -> px
 *
-*   @param {Number} Value
+*   @param {Number} value
 *   @param {CSS Promerty} unit (opt)
 */
 to-unit(value, unit = app.responsive.unit) {
@@ -19,6 +19,17 @@ to-unit(value, unit = app.responsive.unit) {
         value /= 10;
     }
 
+    return s('%s%s', value, unit);
+}
+
+/**
+*   @name to-view-port
+*   @desc Convert given value to view port like vh or vw
+*
+*   @param {Number} value
+*   @param {CSS Property} unit
+*/
+to-view-port(value, unit) {
     return s('%s%s', value, unit);
 }
 
