@@ -3,8 +3,15 @@
 *   @desc Convert to unit depending of app.responsive.unit
 *   using the function helps easly to switch app.responsive.unit value between rem -> px
 *
-*   @param {Number} Value
+*   @param {Number} value
 *   @param {CSS Promerty} unit (opt)
+*/
+/**
+*   @name to-view-port
+*   @desc Convert given value to view port like vh or vw
+*
+*   @param {Number} value
+*   @param {CSS Property} unit
 */
 /**
 *   @name to-negative
@@ -144,34 +151,38 @@ input[type="submit"].ui-button {
   font-size: 1.6rem;
   background-color: #EEE;
   cursor: pointer;
+  overflow: hidden;
   padding-top: 1rem;
   padding-right: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
 }
-.ui-button.ui-button-small {
+.ui-button.ui-button-large {
   padding-top: 2rem;
 }
-.ui-button.ui-button-large {
+.ui-button.ui-button-small {
   padding-top: 0.5rem;
 }
-.ui-button.ui-button-small {
+.ui-button.ui-button-large {
   padding-right: 3rem;
 }
-.ui-button.ui-button-large {
+.ui-button.ui-button-small {
   padding-right: 0.75rem;
 }
-.ui-button.ui-button-small {
+.ui-button.ui-button-large {
   padding-bottom: 2rem;
 }
-.ui-button.ui-button-large {
+.ui-button.ui-button-small {
   padding-bottom: 0.5rem;
 }
-.ui-button.ui-button-small {
+.ui-button.ui-button-large {
   padding-left: 3rem;
 }
-.ui-button.ui-button-large {
+.ui-button.ui-button-small {
   padding-left: 0.75rem;
+}
+.ui-button.ui-button-rounded {
+  border-radius: 0.5rem;
 }
 @media screen and (min-width: 320px) {
   .ui-block-mobile {
@@ -327,41 +338,134 @@ input[type="submit"].ui-button {
   .ui-left-mobile {
     left: 0;
   }
+  .ui-width-1-mobile {
+    width: 100%;
+  }
+  .ui-view-width-1-mobile {
+    width: 100%;
+  }
+  .ui-width-2-mobile {
+    width: 50%;
+  }
+  .ui-view-width-2-mobile {
+    width: 50%;
+  }
+  .ui-width-3-mobile {
+    width: 33.33333333333333%;
+  }
+  .ui-view-width-3-mobile {
+    width: 33.33333333333333%;
+  }
+  .ui-width-4-mobile {
+    width: 25%;
+  }
+  .ui-view-width-4-mobile {
+    width: 25%;
+  }
+  .ui-width-5-mobile {
+    width: 20%;
+  }
+  .ui-view-width-5-mobile {
+    width: 20%;
+  }
+  .ui-width-6-mobile {
+    width: 16.666666666666664%;
+  }
+  .ui-view-width-6-mobile {
+    width: 16.666666666666664%;
+  }
+  .ui-width-7-mobile {
+    width: 14.285714285714285%;
+  }
+  .ui-view-width-7-mobile {
+    width: 14.285714285714285%;
+  }
+  .ui-width-8-mobile {
+    width: 12.5%;
+  }
+  .ui-view-width-8-mobile {
+    width: 12.5%;
+  }
+  .ui-width-9-mobile {
+    width: 11.11111111111111%;
+  }
+  .ui-view-width-9-mobile {
+    width: 11.11111111111111%;
+  }
+  .ui-width-10-mobile {
+    width: 10%;
+  }
+  .ui-view-width-10-mobile {
+    width: 10%;
+  }
   .ui-max-width-mobile {
     max-width: 32rem;
   }
   .ui-width-auto-mobile {
     width: auto;
   }
-  .ui-width-1-mobile {
-    width: 100%;
+  .ui-view-height-1-mobile {
+    height: 100vh;
   }
-  .ui-width-2-mobile {
-    width: 50%;
+  .ui-height-1-mobile {
+    height: 100%;
   }
-  .ui-width-3-mobile {
-    width: 33.33333333333333%;
+  .ui-view-height-2-mobile {
+    height: 50vh;
   }
-  .ui-width-4-mobile {
-    width: 25%;
+  .ui-height-2-mobile {
+    height: 50%;
   }
-  .ui-width-5-mobile {
-    width: 20%;
+  .ui-view-height-3-mobile {
+    height: 33.333333333333336vh;
   }
-  .ui-width-6-mobile {
-    width: 16.666666666666664%;
+  .ui-height-3-mobile {
+    height: 33.33333333333333%;
   }
-  .ui-width-7-mobile {
-    width: 14.285714285714285%;
+  .ui-view-height-4-mobile {
+    height: 25vh;
   }
-  .ui-width-8-mobile {
-    width: 12.5%;
+  .ui-height-4-mobile {
+    height: 25%;
   }
-  .ui-width-9-mobile {
-    width: 11.11111111111111%;
+  .ui-view-height-5-mobile {
+    height: 20vh;
   }
-  .ui-width-10-mobile {
-    width: 10%;
+  .ui-height-5-mobile {
+    height: 20%;
+  }
+  .ui-view-height-6-mobile {
+    height: 16.666666666666668vh;
+  }
+  .ui-height-6-mobile {
+    height: 16.666666666666664%;
+  }
+  .ui-view-height-7-mobile {
+    height: 14.285714285714286vh;
+  }
+  .ui-height-7-mobile {
+    height: 14.285714285714285%;
+  }
+  .ui-view-height-8-mobile {
+    height: 12.5vh;
+  }
+  .ui-height-8-mobile {
+    height: 12.5%;
+  }
+  .ui-view-height-9-mobile {
+    height: 11.11111111111111vh;
+  }
+  .ui-height-9-mobile {
+    height: 11.11111111111111%;
+  }
+  .ui-view-height-10-mobile {
+    height: 10vh;
+  }
+  .ui-height-10-mobile {
+    height: 10%;
+  }
+  .ui-height-auto-mobile {
+    height: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -518,41 +622,134 @@ input[type="submit"].ui-button {
   .ui-left-tablet {
     left: 0;
   }
+  .ui-width-1-tablet {
+    width: 100%;
+  }
+  .ui-view-width-1-tablet {
+    width: 100%;
+  }
+  .ui-width-2-tablet {
+    width: 50%;
+  }
+  .ui-view-width-2-tablet {
+    width: 50%;
+  }
+  .ui-width-3-tablet {
+    width: 33.33333333333333%;
+  }
+  .ui-view-width-3-tablet {
+    width: 33.33333333333333%;
+  }
+  .ui-width-4-tablet {
+    width: 25%;
+  }
+  .ui-view-width-4-tablet {
+    width: 25%;
+  }
+  .ui-width-5-tablet {
+    width: 20%;
+  }
+  .ui-view-width-5-tablet {
+    width: 20%;
+  }
+  .ui-width-6-tablet {
+    width: 16.666666666666664%;
+  }
+  .ui-view-width-6-tablet {
+    width: 16.666666666666664%;
+  }
+  .ui-width-7-tablet {
+    width: 14.285714285714285%;
+  }
+  .ui-view-width-7-tablet {
+    width: 14.285714285714285%;
+  }
+  .ui-width-8-tablet {
+    width: 12.5%;
+  }
+  .ui-view-width-8-tablet {
+    width: 12.5%;
+  }
+  .ui-width-9-tablet {
+    width: 11.11111111111111%;
+  }
+  .ui-view-width-9-tablet {
+    width: 11.11111111111111%;
+  }
+  .ui-width-10-tablet {
+    width: 10%;
+  }
+  .ui-view-width-10-tablet {
+    width: 10%;
+  }
   .ui-max-width-tablet {
     max-width: 76.8rem;
   }
   .ui-width-auto-tablet {
     width: auto;
   }
-  .ui-width-1-tablet {
-    width: 100%;
+  .ui-view-height-1-tablet {
+    height: 100vh;
   }
-  .ui-width-2-tablet {
-    width: 50%;
+  .ui-height-1-tablet {
+    height: 100%;
   }
-  .ui-width-3-tablet {
-    width: 33.33333333333333%;
+  .ui-view-height-2-tablet {
+    height: 50vh;
   }
-  .ui-width-4-tablet {
-    width: 25%;
+  .ui-height-2-tablet {
+    height: 50%;
   }
-  .ui-width-5-tablet {
-    width: 20%;
+  .ui-view-height-3-tablet {
+    height: 33.333333333333336vh;
   }
-  .ui-width-6-tablet {
-    width: 16.666666666666664%;
+  .ui-height-3-tablet {
+    height: 33.33333333333333%;
   }
-  .ui-width-7-tablet {
-    width: 14.285714285714285%;
+  .ui-view-height-4-tablet {
+    height: 25vh;
   }
-  .ui-width-8-tablet {
-    width: 12.5%;
+  .ui-height-4-tablet {
+    height: 25%;
   }
-  .ui-width-9-tablet {
-    width: 11.11111111111111%;
+  .ui-view-height-5-tablet {
+    height: 20vh;
   }
-  .ui-width-10-tablet {
-    width: 10%;
+  .ui-height-5-tablet {
+    height: 20%;
+  }
+  .ui-view-height-6-tablet {
+    height: 16.666666666666668vh;
+  }
+  .ui-height-6-tablet {
+    height: 16.666666666666664%;
+  }
+  .ui-view-height-7-tablet {
+    height: 14.285714285714286vh;
+  }
+  .ui-height-7-tablet {
+    height: 14.285714285714285%;
+  }
+  .ui-view-height-8-tablet {
+    height: 12.5vh;
+  }
+  .ui-height-8-tablet {
+    height: 12.5%;
+  }
+  .ui-view-height-9-tablet {
+    height: 11.11111111111111vh;
+  }
+  .ui-height-9-tablet {
+    height: 11.11111111111111%;
+  }
+  .ui-view-height-10-tablet {
+    height: 10vh;
+  }
+  .ui-height-10-tablet {
+    height: 10%;
+  }
+  .ui-height-auto-tablet {
+    height: auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -709,41 +906,134 @@ input[type="submit"].ui-button {
   .ui-left-desktop {
     left: 0;
   }
+  .ui-width-1-desktop {
+    width: 100%;
+  }
+  .ui-view-width-1-desktop {
+    width: 100%;
+  }
+  .ui-width-2-desktop {
+    width: 50%;
+  }
+  .ui-view-width-2-desktop {
+    width: 50%;
+  }
+  .ui-width-3-desktop {
+    width: 33.33333333333333%;
+  }
+  .ui-view-width-3-desktop {
+    width: 33.33333333333333%;
+  }
+  .ui-width-4-desktop {
+    width: 25%;
+  }
+  .ui-view-width-4-desktop {
+    width: 25%;
+  }
+  .ui-width-5-desktop {
+    width: 20%;
+  }
+  .ui-view-width-5-desktop {
+    width: 20%;
+  }
+  .ui-width-6-desktop {
+    width: 16.666666666666664%;
+  }
+  .ui-view-width-6-desktop {
+    width: 16.666666666666664%;
+  }
+  .ui-width-7-desktop {
+    width: 14.285714285714285%;
+  }
+  .ui-view-width-7-desktop {
+    width: 14.285714285714285%;
+  }
+  .ui-width-8-desktop {
+    width: 12.5%;
+  }
+  .ui-view-width-8-desktop {
+    width: 12.5%;
+  }
+  .ui-width-9-desktop {
+    width: 11.11111111111111%;
+  }
+  .ui-view-width-9-desktop {
+    width: 11.11111111111111%;
+  }
+  .ui-width-10-desktop {
+    width: 10%;
+  }
+  .ui-view-width-10-desktop {
+    width: 10%;
+  }
   .ui-max-width-desktop {
     max-width: 102.4rem;
   }
   .ui-width-auto-desktop {
     width: auto;
   }
-  .ui-width-1-desktop {
-    width: 100%;
+  .ui-view-height-1-desktop {
+    height: 100vh;
   }
-  .ui-width-2-desktop {
-    width: 50%;
+  .ui-height-1-desktop {
+    height: 100%;
   }
-  .ui-width-3-desktop {
-    width: 33.33333333333333%;
+  .ui-view-height-2-desktop {
+    height: 50vh;
   }
-  .ui-width-4-desktop {
-    width: 25%;
+  .ui-height-2-desktop {
+    height: 50%;
   }
-  .ui-width-5-desktop {
-    width: 20%;
+  .ui-view-height-3-desktop {
+    height: 33.333333333333336vh;
   }
-  .ui-width-6-desktop {
-    width: 16.666666666666664%;
+  .ui-height-3-desktop {
+    height: 33.33333333333333%;
   }
-  .ui-width-7-desktop {
-    width: 14.285714285714285%;
+  .ui-view-height-4-desktop {
+    height: 25vh;
   }
-  .ui-width-8-desktop {
-    width: 12.5%;
+  .ui-height-4-desktop {
+    height: 25%;
   }
-  .ui-width-9-desktop {
-    width: 11.11111111111111%;
+  .ui-view-height-5-desktop {
+    height: 20vh;
   }
-  .ui-width-10-desktop {
-    width: 10%;
+  .ui-height-5-desktop {
+    height: 20%;
+  }
+  .ui-view-height-6-desktop {
+    height: 16.666666666666668vh;
+  }
+  .ui-height-6-desktop {
+    height: 16.666666666666664%;
+  }
+  .ui-view-height-7-desktop {
+    height: 14.285714285714286vh;
+  }
+  .ui-height-7-desktop {
+    height: 14.285714285714285%;
+  }
+  .ui-view-height-8-desktop {
+    height: 12.5vh;
+  }
+  .ui-height-8-desktop {
+    height: 12.5%;
+  }
+  .ui-view-height-9-desktop {
+    height: 11.11111111111111vh;
+  }
+  .ui-height-9-desktop {
+    height: 11.11111111111111%;
+  }
+  .ui-view-height-10-desktop {
+    height: 10vh;
+  }
+  .ui-height-10-desktop {
+    height: 10%;
+  }
+  .ui-height-auto-desktop {
+    height: auto;
   }
 }
 
