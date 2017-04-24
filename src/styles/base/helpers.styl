@@ -59,6 +59,16 @@ init-helper-display(breakpoint-name, display-types = app.helper.display.type) {
 
 // WIDTH
 init-helper-width(breakpoint-name) {
+    for value in (app.constant.full..app.grid.length) {
+        .width-{value}-{breakpoint-name} {
+            width: percentage(app.constant.full / value);
+        }
+
+        .view-width-{value}-{breakpoint-name} {
+            width: percentage(app.constant.full / value);
+        }
+    }
+
     .max-width-{breakpoint-name} {
         max-width: to-unit(app.responsive.breakpoint[breakpoint-name]);
     }
@@ -66,13 +76,24 @@ init-helper-width(breakpoint-name) {
     .width-auto-{breakpoint-name} {
         width: auto;
     }
+ }
 
+// HEIGHT
+init-helper-height(breakpoint-name) {
     for value in (app.constant.full..app.grid.length) {
-        .width-{value}-{breakpoint-name} {
-            width: percentage(app.constant.full / value);
+        .view-height-{value}-{breakpoint-name} {
+            height: to-view-port(100 / value, vh);
+        }
+
+        .height-{value}-{breakpoint-name} {
+            height: percentage(app.constant.full / value);
         }
     }
- }
+
+    .height-auto-{breakpoint-name} {
+        height: auto;
+    }
+}
 
 // ALIGN
 init-helper-aligning(breakpoint-name) {
@@ -127,5 +148,5 @@ init-helper-common() {
     }
 }
 
-app.exports.responsive.helper = ('display' 'aligning' 'spacing' 'positioning' 'width');
+app.exports.responsive.helper = ('display' 'aligning' 'spacing' 'positioning' 'width' 'height');
 app.exports.regular.helper = ('common');
