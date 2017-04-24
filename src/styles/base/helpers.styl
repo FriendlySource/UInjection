@@ -120,6 +120,10 @@ init-helper-spacing(breakpoint-name) {
                     {type}-{value}: to-unit(app.grid.spacing);
                 }
             }
+
+            .{type}-all-{breakpoint-name} {
+                {type}: to-unit(app.grid.spacing);
+            }
         }
     }
 }

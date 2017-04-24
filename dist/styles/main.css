@@ -289,30 +289,57 @@ input[type="submit"].ui-button {
   .ui-margin-top-mobile {
     margin-top: 1rem;
   }
+  .ui-margin-all-mobile {
+    margin: 1rem;
+  }
   .ui-margin-right-mobile {
     margin-right: 1rem;
+  }
+  .ui-margin-all-mobile {
+    margin: 1rem;
   }
   .ui-margin-bottom-mobile {
     margin-bottom: 1rem;
   }
+  .ui-margin-all-mobile {
+    margin: 1rem;
+  }
   .ui-margin-left-mobile {
     margin-left: 1rem;
+  }
+  .ui-margin-all-mobile {
+    margin: 1rem;
   }
   .ui-margin-center-mobile {
     margin-left: auto;
     margin-right: auto;
   }
+  .ui-margin-all-mobile {
+    margin: 1rem;
+  }
   .ui-padding-top-mobile {
     padding-top: 1rem;
+  }
+  .ui-padding-all-mobile {
+    padding: 1rem;
   }
   .ui-padding-right-mobile {
     padding-right: 1rem;
   }
+  .ui-padding-all-mobile {
+    padding: 1rem;
+  }
   .ui-padding-bottom-mobile {
     padding-bottom: 1rem;
   }
+  .ui-padding-all-mobile {
+    padding: 1rem;
+  }
   .ui-padding-left-mobile {
     padding-left: 1rem;
+  }
+  .ui-padding-all-mobile {
+    padding: 1rem;
   }
   .ui-static-mobile {
     position: static;
@@ -573,30 +600,57 @@ input[type="submit"].ui-button {
   .ui-margin-top-tablet {
     margin-top: 1rem;
   }
+  .ui-margin-all-tablet {
+    margin: 1rem;
+  }
   .ui-margin-right-tablet {
     margin-right: 1rem;
+  }
+  .ui-margin-all-tablet {
+    margin: 1rem;
   }
   .ui-margin-bottom-tablet {
     margin-bottom: 1rem;
   }
+  .ui-margin-all-tablet {
+    margin: 1rem;
+  }
   .ui-margin-left-tablet {
     margin-left: 1rem;
+  }
+  .ui-margin-all-tablet {
+    margin: 1rem;
   }
   .ui-margin-center-tablet {
     margin-left: auto;
     margin-right: auto;
   }
+  .ui-margin-all-tablet {
+    margin: 1rem;
+  }
   .ui-padding-top-tablet {
     padding-top: 1rem;
+  }
+  .ui-padding-all-tablet {
+    padding: 1rem;
   }
   .ui-padding-right-tablet {
     padding-right: 1rem;
   }
+  .ui-padding-all-tablet {
+    padding: 1rem;
+  }
   .ui-padding-bottom-tablet {
     padding-bottom: 1rem;
   }
+  .ui-padding-all-tablet {
+    padding: 1rem;
+  }
   .ui-padding-left-tablet {
     padding-left: 1rem;
+  }
+  .ui-padding-all-tablet {
+    padding: 1rem;
   }
   .ui-static-tablet {
     position: static;
@@ -857,30 +911,57 @@ input[type="submit"].ui-button {
   .ui-margin-top-desktop {
     margin-top: 1rem;
   }
+  .ui-margin-all-desktop {
+    margin: 1rem;
+  }
   .ui-margin-right-desktop {
     margin-right: 1rem;
+  }
+  .ui-margin-all-desktop {
+    margin: 1rem;
   }
   .ui-margin-bottom-desktop {
     margin-bottom: 1rem;
   }
+  .ui-margin-all-desktop {
+    margin: 1rem;
+  }
   .ui-margin-left-desktop {
     margin-left: 1rem;
+  }
+  .ui-margin-all-desktop {
+    margin: 1rem;
   }
   .ui-margin-center-desktop {
     margin-left: auto;
     margin-right: auto;
   }
+  .ui-margin-all-desktop {
+    margin: 1rem;
+  }
   .ui-padding-top-desktop {
     padding-top: 1rem;
+  }
+  .ui-padding-all-desktop {
+    padding: 1rem;
   }
   .ui-padding-right-desktop {
     padding-right: 1rem;
   }
+  .ui-padding-all-desktop {
+    padding: 1rem;
+  }
   .ui-padding-bottom-desktop {
     padding-bottom: 1rem;
   }
+  .ui-padding-all-desktop {
+    padding: 1rem;
+  }
   .ui-padding-left-desktop {
     padding-left: 1rem;
+  }
+  .ui-padding-all-desktop {
+    padding: 1rem;
   }
   .ui-static-desktop {
     position: static;
