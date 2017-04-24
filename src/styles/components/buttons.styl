@@ -25,17 +25,22 @@ init-button-default() {
         font-size: to-unit(app.button.font.size);
         background-color: unquote(app.color.default);
         cursor: pointer;
+        overflow: hidden;
 
         for padding-side, padding-value in (app.button.padding) {
             padding-{padding-side}: to-unit(padding-value);
             
-            &.button-{app.constant.small} {
+            &.button-{app.constant.large} {
                 padding-{padding-side}: to-unit(multiply(padding-value));
             }
 
-            &.button-{app.constant.large} {
+            &.button-{app.constant.small} {
                 padding-{padding-side}: to-unit(divide(padding-value));
             }
+        }
+
+        &.button-rounded {
+            border-radius: to-unit(5);
         }
     }
 }
